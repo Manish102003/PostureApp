@@ -160,8 +160,8 @@ def posture(image_path):
     if not result.pose_landmarks:
         output = {
             "status": "No person detected",
-            "problems": [],
-            "exercises": []
+            "problems": "Upload Clear Image",
+            "exercises": "Improve your Photographer skills"
         }
     else:
         output = check_posture(result.pose_landmarks, mpPose)

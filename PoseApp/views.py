@@ -21,7 +21,7 @@ def index(request):
             image.problems = "".join(result['problems'])
             image.exercises = "".join(result['exercises'])
             image.save()
-            return redirect('/')
+            return redirect('home')
     else:
         image = ImageForm()
     return render(request,'index.html',{"image":image})
@@ -29,4 +29,7 @@ def index(request):
 @login_required
 def result(request):
     images = Image.objects.filter(user=request.user)
-    return render(request,"home.html",{"images":images})
+    return render(request,"Home/home.html",{"images":images})
+
+def main(request):
+    return render(request,"Home/main.html")

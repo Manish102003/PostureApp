@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+    <!-- Hero Section -->
+    <header class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="fw-bold">Posture Detection AI</h1>
+            <p class="lead">Analyze posture, detect deformities, and receive correction exercises</p>
+            <a href="{% url 'upload' %}" class="btn btn-outline-light">Start Analysis</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-3 text-white bg-secondary rounded-3">
+        <div class="container">
+            <h2 class="text-center">About This Project</h2>
+            <p class="text-center fs-5">
+               This AI-powered Posture Detection System helps users identify and correct posture deformities using advanced machine learning
+                and image processing techniques. By analyzing side-profile images, it detects spinal misalignments, forward head posture, and other issues that 
+                can lead to long-term discomfort. Using Python and OpenCV, the system evaluates body posture and recommends personalized exercises tailored to improvement. 
+                Poor posture can cause back pain, muscle fatigue, and decreased mobility—this tool helps prevent such issues. The project combines AI-driven detection and fitness 
+                recommendations to promote better posture awareness.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Instructions Section -->
+    <section class="bg-dark text-white py-4 rounded-3">
+        <div class="container">
+            <h2 class="text-center pb-1">How It Works</h2>
+            <div class="card bg-secondary text-white p-4 fs-5">
+                <ul class="list-unstyled">
+                    <li><strong>Step 1:</strong> Upload a side-angle image of yourself.</li>
+                    <li><strong>Step 2:</strong> AI detects posture issues using advanced Python-based recognition.</li>
+                    <li><strong>Step 3:</strong> Receive personalized exercise recommendations.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

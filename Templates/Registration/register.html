@@ -22,8 +22,15 @@
                     {{ form.password2.label_tag }}
                     <input type="password" name="password2" class="form-control" placeholder="Confirm your password" required>
                 </div>
-                
-                <button class="btn btn-primary w-100 mt-3">Sign Up</button>
+                <p class="my-1">Password must contain:</p>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least one uppercase letter (A-Z)</li>
+                    <li>At least one lowercase letter (a-z)</li>
+                    <li>At least one number (0-9)</li>
+                    <li>At least one special character (!@#$%^&*)</li>
+                </ul>
+                <button class="btn btn-primary w-100 mt-3 btn-sm" >Sign Up</button>
             </form>
 
             <p class="text-center mt-3">

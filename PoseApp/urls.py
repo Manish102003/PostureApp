@@ -23,7 +23,8 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('upload/', views.index,name='upload'),
-    path('', views.result,name='home'),
+    path('', views.main,name='main'),
+    path('result/', views.result,name='home'),
     path('user/',include('user.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     
