@@ -132,13 +132,13 @@ def check_posture(pose_landmarks, mpPose):
     if not posture_problems:
         return {
             "status": "Healthy",
-            "problems": "No",
-            "exercises": "Not Needed"
+            "problems": [],
+            "exercises": []
         }
     else:
         exercises = []
         for problem in posture_problems:
-            exercises.extend(EXERCISE_RECOMMENDATIONS.get(problem))
+            exercises.extend(EXERCISE_RECOMMENDATIONS.get(problem, []))
         return {
             "status": "Posture Issue Detected",
             "problems": posture_problems,
@@ -169,8 +169,12 @@ def posture(image_path):
     # Delete the image file after processing
     if os.path.exists(image_path):
         os.remove(image_path)
-        print(f"Image '{image_path}' deleted after processing.") 
+        print(f"Image '{image_path}' deleted after processing.")  # Optional: remove or keep this print[1][2][3]
     else:
-        print(f"Image '{image_path}' not found for deletion.")  
+        print(f"Image '{image_path}' not found for deletion.")    # Optional: remove or keep this print[1][2][3]
 
     return output
+
+# Example usage:
+result = posture("media/photos/image24.png")  # Change path to your image
+print(result)
