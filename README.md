@@ -42,7 +42,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone (https://github.com/Manish102003/PostureApp.git)
+   git clone https://github.com/Manish102003/PostureApp.git
    cd PostureApp
    ```
 
